@@ -1,0 +1,720 @@
+$date
+	Thu Jun 25 03:26:18 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_mlp_top $end
+$var wire 32 ! y1 [31:0] $end
+$var wire 32 " y0 [31:0] $end
+$var wire 1 # done $end
+$var wire 3 $ dbg_state [2:0] $end
+$var wire 64 % Y_OUT [63:0] $end
+$var parameter 32 & ACC_W $end
+$var parameter 32 ' DW $end
+$var reg 32 ( X_IN [31:0] $end
+$var reg 1 ) clk $end
+$var reg 1 * rst $end
+$var reg 1 + start $end
+$scope module uut $end
+$var wire 32 , X_IN [31:0] $end
+$var wire 1 ) clk $end
+$var wire 1 * rst $end
+$var wire 1 + start $end
+$var wire 64 - l2_W [63:0] $end
+$var wire 64 . l2_B [63:0] $end
+$var wire 32 / l1_Yq [31:0] $end
+$var wire 128 0 l1_Y [127:0] $end
+$var wire 128 1 l1_W [127:0] $end
+$var wire 128 2 l1_B [127:0] $end
+$var wire 1 # done $end
+$var wire 3 3 dbg_state [2:0] $end
+$var wire 64 4 Y_OUT [63:0] $end
+$var parameter 32 5 ACC_W $end
+$var parameter 32 6 DW $end
+$scope module u_fsm $end
+$var wire 1 ) clk $end
+$var wire 1 * rst $end
+$var wire 1 + start $end
+$var wire 3 7 state_out [2:0] $end
+$var parameter 3 8 DONE_ST $end
+$var parameter 3 9 IDLE $end
+$var parameter 3 : LAYER1_WAIT $end
+$var parameter 3 ; LAYER2_WAIT $end
+$var parameter 3 < LOAD_INPUT $end
+$var reg 1 # done $end
+$var reg 3 = state [2:0] $end
+$upscope $end
+$scope module u_layer1 $end
+$var wire 32 > X [31:0] $end
+$var wire 1 ) clk $end
+$var wire 1 * rst $end
+$var wire 128 ? Y_FLAT [127:0] $end
+$var wire 128 @ W_FLAT [127:0] $end
+$var wire 128 A B_FLAT [127:0] $end
+$var parameter 32 B ACC_W $end
+$var parameter 32 C DW $end
+$var parameter 32 D N_IN $end
+$var parameter 32 E N_OUT $end
+$scope begin NEURON[0] $end
+$var parameter 2 F j $end
+$scope module u_neuron $end
+$var wire 32 G B [31:0] $end
+$var wire 32 H W [31:0] $end
+$var wire 32 I X [31:0] $end
+$var wire 1 ) clk $end
+$var wire 1 * rst $end
+$var parameter 32 J ACC_W $end
+$var parameter 32 K DW $end
+$var parameter 32 L N $end
+$var reg 32 M OUT [31:0] $end
+$var reg 32 N sum_comb [31:0] $end
+$var integer 32 O k [31:0] $end
+$scope begin MULT[0] $end
+$var parameter 2 P i $end
+$upscope $end
+$scope begin MULT[1] $end
+$var parameter 2 Q i $end
+$upscope $end
+$scope begin MULT[2] $end
+$var parameter 3 R i $end
+$upscope $end
+$scope begin MULT[3] $end
+$var parameter 3 S i $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin NEURON[1] $end
+$var parameter 2 T j $end
+$scope module u_neuron $end
+$var wire 32 U B [31:0] $end
+$var wire 32 V W [31:0] $end
+$var wire 32 W X [31:0] $end
+$var wire 1 ) clk $end
+$var wire 1 * rst $end
+$var parameter 32 X ACC_W $end
+$var parameter 32 Y DW $end
+$var parameter 32 Z N $end
+$var reg 32 [ OUT [31:0] $end
+$var reg 32 \ sum_comb [31:0] $end
+$var integer 32 ] k [31:0] $end
+$scope begin MULT[0] $end
+$var parameter 2 ^ i $end
+$upscope $end
+$scope begin MULT[1] $end
+$var parameter 2 _ i $end
+$upscope $end
+$scope begin MULT[2] $end
+$var parameter 3 ` i $end
+$upscope $end
+$scope begin MULT[3] $end
+$var parameter 3 a i $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin NEURON[2] $end
+$var parameter 3 b j $end
+$scope module u_neuron $end
+$var wire 32 c B [31:0] $end
+$var wire 32 d W [31:0] $end
+$var wire 32 e X [31:0] $end
+$var wire 1 ) clk $end
+$var wire 1 * rst $end
+$var parameter 32 f ACC_W $end
+$var parameter 32 g DW $end
+$var parameter 32 h N $end
+$var reg 32 i OUT [31:0] $end
+$var reg 32 j sum_comb [31:0] $end
+$var integer 32 k k [31:0] $end
+$scope begin MULT[0] $end
+$var parameter 2 l i $end
+$upscope $end
+$scope begin MULT[1] $end
+$var parameter 2 m i $end
+$upscope $end
+$scope begin MULT[2] $end
+$var parameter 3 n i $end
+$upscope $end
+$scope begin MULT[3] $end
+$var parameter 3 o i $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin NEURON[3] $end
+$var parameter 3 p j $end
+$scope module u_neuron $end
+$var wire 32 q B [31:0] $end
+$var wire 32 r W [31:0] $end
+$var wire 32 s X [31:0] $end
+$var wire 1 ) clk $end
+$var wire 1 * rst $end
+$var parameter 32 t ACC_W $end
+$var parameter 32 u DW $end
+$var parameter 32 v N $end
+$var reg 32 w OUT [31:0] $end
+$var reg 32 x sum_comb [31:0] $end
+$var integer 32 y k [31:0] $end
+$scope begin MULT[0] $end
+$var parameter 2 z i $end
+$upscope $end
+$scope begin MULT[1] $end
+$var parameter 2 { i $end
+$upscope $end
+$scope begin MULT[2] $end
+$var parameter 3 | i $end
+$upscope $end
+$scope begin MULT[3] $end
+$var parameter 3 } i $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module u_layer2 $end
+$var wire 1 ) clk $end
+$var wire 1 * rst $end
+$var wire 64 ~ Y_FLAT [63:0] $end
+$var wire 32 !" X [31:0] $end
+$var wire 64 "" W_FLAT [63:0] $end
+$var wire 64 #" B_FLAT [63:0] $end
+$var parameter 32 $" ACC_W $end
+$var parameter 32 %" DW $end
+$var parameter 32 &" N_IN $end
+$var parameter 32 '" N_OUT $end
+$scope begin NEURON[0] $end
+$var parameter 2 (" j $end
+$scope module u_neuron $end
+$var wire 32 )" B [31:0] $end
+$var wire 32 *" W [31:0] $end
+$var wire 1 ) clk $end
+$var wire 1 * rst $end
+$var wire 32 +" X [31:0] $end
+$var parameter 32 ," ACC_W $end
+$var parameter 32 -" DW $end
+$var parameter 32 ." N $end
+$var reg 32 /" OUT [31:0] $end
+$var reg 32 0" sum_comb [31:0] $end
+$var integer 32 1" k [31:0] $end
+$scope begin MULT[0] $end
+$var parameter 2 2" i $end
+$upscope $end
+$scope begin MULT[1] $end
+$var parameter 2 3" i $end
+$upscope $end
+$scope begin MULT[2] $end
+$var parameter 3 4" i $end
+$upscope $end
+$scope begin MULT[3] $end
+$var parameter 3 5" i $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope begin NEURON[1] $end
+$var parameter 2 6" j $end
+$scope module u_neuron $end
+$var wire 32 7" B [31:0] $end
+$var wire 32 8" W [31:0] $end
+$var wire 1 ) clk $end
+$var wire 1 * rst $end
+$var wire 32 9" X [31:0] $end
+$var parameter 32 :" ACC_W $end
+$var parameter 32 ;" DW $end
+$var parameter 32 <" N $end
+$var reg 32 =" OUT [31:0] $end
+$var reg 32 >" sum_comb [31:0] $end
+$var integer 32 ?" k [31:0] $end
+$scope begin MULT[0] $end
+$var parameter 2 @" i $end
+$upscope $end
+$scope begin MULT[1] $end
+$var parameter 2 A" i $end
+$upscope $end
+$scope begin MULT[2] $end
+$var parameter 3 B" i $end
+$upscope $end
+$scope begin MULT[3] $end
+$var parameter 3 C" i $end
+$upscope $end
+$upscope $end
+$upscope $end
+$upscope $end
+$scope module u_requant $end
+$var wire 128 D" IN_FLAT [127:0] $end
+$var wire 32 E" OUT_FLAT [31:0] $end
+$var parameter 32 F" ACC_W $end
+$var parameter 32 G" DW $end
+$var parameter 8 H" MAX_VAL $end
+$var parameter 8 I" MIN_VAL $end
+$var parameter 32 J" N $end
+$scope begin SAT[0] $end
+$var wire 32 K" val [31:0] $end
+$var parameter 2 L" i $end
+$upscope $end
+$scope begin SAT[1] $end
+$var wire 32 M" val [31:0] $end
+$var parameter 2 N" i $end
+$upscope $end
+$scope begin SAT[2] $end
+$var wire 32 O" val [31:0] $end
+$var parameter 3 P" i $end
+$upscope $end
+$scope begin SAT[3] $end
+$var wire 32 Q" val [31:0] $end
+$var parameter 3 R" i $end
+$upscope $end
+$upscope $end
+$scope module u_w1 $end
+$var wire 128 S" W_FLAT [127:0] $end
+$var wire 128 T" B_FLAT [127:0] $end
+$var parameter 32 U" ACC_W $end
+$var parameter 32 V" DW $end
+$upscope $end
+$scope module u_w2 $end
+$var wire 64 W" W_FLAT [63:0] $end
+$var wire 64 X" B_FLAT [63:0] $end
+$var parameter 32 Y" ACC_W $end
+$var parameter 32 Z" DW $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1000 Z"
+b100000 Y"
+b1000 V"
+b100000 U"
+b11 R"
+b10 P"
+b1 N"
+b0 L"
+b100 J"
+b10000000 I"
+b1111111 H"
+b1000 G"
+b100000 F"
+b11 C"
+b10 B"
+b1 A"
+b0 @"
+b100 <"
+b1000 ;"
+b100000 :"
+b1 6"
+b11 5"
+b10 4"
+b1 3"
+b0 2"
+b100 ."
+b1000 -"
+b100000 ,"
+b0 ("
+b10 '"
+b100 &"
+b1000 %"
+b100000 $"
+b11 }
+b10 |
+b1 {
+b0 z
+b100 v
+b1000 u
+b100000 t
+b11 p
+b11 o
+b10 n
+b1 m
+b0 l
+b100 h
+b1000 g
+b100000 f
+b10 b
+b11 a
+b10 `
+b1 _
+b0 ^
+b100 Z
+b1000 Y
+b100000 X
+b1 T
+b11 S
+b10 R
+b1 Q
+b0 P
+b100 L
+b1000 K
+b100000 J
+b0 F
+b100 E
+b100 D
+b1000 C
+b100000 B
+b1 <
+b11 ;
+b10 :
+b0 9
+b100 8
+b1000 6
+b100000 5
+b1000 '
+b100000 &
+$end
+#0
+$dumpvars
+b1111111111111111111111111111111000000000000000000000000000000000 X"
+b100000001000000000000000000000000000000000000000100000001 W"
+b1111111111111111111111111111111010000000000000000000000000000000000000000000000000000000000000000 T"
+b10000000000000000000000000000000000000000000000000000000101111111100000001111111110000000100000001000000010000000100000001 S"
+b0 Q"
+b0 O"
+b0 M"
+b0 K"
+b0 E"
+b0 D"
+b100 ?"
+b11111111111111111111111111111110 >"
+b0 ="
+b0 9"
+b1000000010000000000000000 8"
+b11111111111111111111111111111110 7"
+b100 1"
+b0 0"
+b0 /"
+b0 +"
+b100000001 *"
+b0 )"
+b1111111111111111111111111111111000000000000000000000000000000000 #"
+b100000001000000000000000000000000000000000000000100000001 ""
+b0 !"
+b0 ~
+b100 y
+b1 x
+b0 w
+b0 s
+b10000000000000000000000000 r
+b1 q
+b100 k
+b11111111111111111111111111111101 j
+b0 i
+b0 e
+b10 d
+b11111111111111111111111111111101 c
+b100 ]
+b0 \
+b0 [
+b0 W
+b11111111000000011111111100000001 V
+b0 U
+b100 O
+b0 N
+b0 M
+b0 I
+b1000000010000000100000001 H
+b0 G
+b1111111111111111111111111111111010000000000000000000000000000000000000000000000000000000000000000 A
+b10000000000000000000000000000000000000000000000000000000101111111100000001111111110000000100000001000000010000000100000001 @
+b0 ?
+b0 >
+b0 =
+b0 7
+b0 4
+b0 3
+b1111111111111111111111111111111010000000000000000000000000000000000000000000000000000000000000000 2
+b10000000000000000000000000000000000000000000000000000000101111111100000001111111110000000100000001000000010000000100000001 1
+b0 0
+b0 /
+b1111111111111111111111111111111000000000000000000000000000000000 .
+b100000001000000000000000000000000000000000000000100000001 -
+b0 ,
+0+
+1*
+0)
+b0 (
+b0 %
+b0 $
+0#
+b0 "
+b0 !
+$end
+#5000
+1)
+#10000
+0)
+#12000
+0*
+#15000
+b100 ?"
+b11111111111111111111111111111111 >"
+b1000000000000000000000000 /
+b1000000000000000000000000 !"
+b1000000000000000000000000 +"
+b1000000000000000000000000 9"
+b1000000000000000000000000 E"
+b1 Q"
+b1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 0
+b1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 ?
+b1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 D"
+b1 w
+1)
+#20000
+0)
+#22000
+b1000 N
+b100 O
+b11111111111111111111111111111010 \
+b100 ]
+b100 k
+b1 j
+b100 y
+b1001 x
+1+
+b100111111110000001100000010 (
+b100111111110000001100000010 ,
+b100111111110000001100000010 >
+b100111111110000001100000010 I
+b100111111110000001100000010 W
+b100111111110000001100000010 e
+b100111111110000001100000010 s
+#25000
+b100 ?"
+b1000 >"
+b1000 0"
+b100 1"
+b1001000000010000000000001000 /
+b1001000000010000000000001000 !"
+b1001000000010000000000001000 +"
+b1001000000010000000000001000 9"
+b1001000000010000000000001000 E"
+b1001 Q"
+b1 O"
+b1000 K"
+b1 $
+b1 3
+b1 7
+b1 =
+b1001 w
+b1 i
+b1001000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000001000 0
+b1001000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000001000 ?
+b1001000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000001000 D"
+b1000 M
+1)
+#30000
+0)
+#32000
+0+
+#35000
+b1000 "
+b1000 !
+b1000 /"
+b100000000000000000000000000000001000 %
+b100000000000000000000000000000001000 4
+b100000000000000000000000000000001000 ~
+b1000 ="
+b10 $
+b10 3
+b10 7
+b10 =
+1)
+#40000
+0)
+#45000
+b11 $
+b11 3
+b11 7
+b11 =
+1)
+#50000
+0)
+#55000
+b100 $
+b100 3
+b100 7
+b100 =
+1)
+#60000
+0)
+#65000
+b0 $
+b0 3
+b0 7
+b0 =
+1#
+1)
+#70000
+0)
+#72000
+b100 O
+b0 N
+b100 ]
+b0 \
+b100 k
+b11111111111111111111111111111101 j
+b100 y
+b1 x
+1+
+b0 (
+b0 ,
+b0 >
+b0 I
+b0 W
+b0 e
+b0 s
+#75000
+b100 1"
+b0 0"
+b100 ?"
+b11111111111111111111111111111111 >"
+b1000000000000000000000000 /
+b1000000000000000000000000 !"
+b1000000000000000000000000 +"
+b1000000000000000000000000 9"
+b1000000000000000000000000 E"
+b0 K"
+b0 O"
+b1 Q"
+b0 M
+b0 i
+b1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 0
+b1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 ?
+b1000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000 D"
+b1 w
+b1 $
+b1 3
+b1 7
+b1 =
+0#
+1)
+#80000
+0)
+#82000
+0+
+#85000
+b0 !
+b0 "
+b10 $
+b10 3
+b10 7
+b10 =
+b0 ="
+b0 %
+b0 4
+b0 ~
+b0 /"
+1)
+#90000
+0)
+#95000
+b11 $
+b11 3
+b11 7
+b11 =
+1)
+#100000
+0)
+#105000
+b100 $
+b100 3
+b100 7
+b100 =
+1)
+#110000
+0)
+#115000
+b0 $
+b0 3
+b0 7
+b0 =
+1#
+1)
+#120000
+0)
+#122000
+b10100 N
+b100 O
+b0 \
+b100 ]
+b100 k
+b111 j
+b100 y
+b1011 x
+1+
+b101000001010000010100000101 (
+b101000001010000010100000101 ,
+b101000001010000010100000101 >
+b101000001010000010100000101 I
+b101000001010000010100000101 W
+b101000001010000010100000101 e
+b101000001010000010100000101 s
+#125000
+b100 ?"
+b10000 >"
+b10100 0"
+b100 1"
+b1011000001110000000000010100 /
+b1011000001110000000000010100 !"
+b1011000001110000000000010100 +"
+b1011000001110000000000010100 9"
+b1011000001110000000000010100 E"
+b1011 Q"
+b111 O"
+b10100 K"
+b1 $
+b1 3
+b1 7
+b1 =
+0#
+b1011 w
+b111 i
+b1011000000000000000000000000000001110000000000000000000000000000000000000000000000000000000000010100 0
+b1011000000000000000000000000000001110000000000000000000000000000000000000000000000000000000000010100 ?
+b1011000000000000000000000000000001110000000000000000000000000000000000000000000000000000000000010100 D"
+b10100 M
+1)
+#130000
+0)
+#132000
+0+
+#135000
+b10100 "
+b10000 !
+b10100 /"
+b1000000000000000000000000000000010100 %
+b1000000000000000000000000000000010100 4
+b1000000000000000000000000000000010100 ~
+b10000 ="
+b10 $
+b10 3
+b10 7
+b10 =
+1)
+#140000
+0)
+#145000
+b11 $
+b11 3
+b11 7
+b11 =
+1)
+#150000
+0)
+#155000
+b100 $
+b100 3
+b100 7
+b100 =
+1)
+#160000
+0)
+#165000
+b0 $
+b0 3
+b0 7
+b0 =
+1#
+1)
+#170000
+0)
+#172000

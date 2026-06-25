@@ -1,0 +1,122 @@
+$date
+	Fri Jun 12 10:10:56 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_mac_dot $end
+$var wire 32 ! OUT [31:0] $end
+$var reg 32 " B [31:0] $end
+$var reg 16 # I [15:0] $end
+$var reg 16 $ W [15:0] $end
+$var reg 1 % clk $end
+$var reg 1 & rst $end
+$scope module uut $end
+$var wire 32 ' B [31:0] $end
+$var wire 16 ( I [15:0] $end
+$var wire 16 ) W [15:0] $end
+$var wire 1 % clk $end
+$var wire 1 & rst $end
+$var wire 8 * p3 [7:0] $end
+$var wire 8 + p2 [7:0] $end
+$var wire 8 , p1 [7:0] $end
+$var wire 8 - p0 [7:0] $end
+$var reg 32 . OUT [31:0] $end
+$var reg 16 / SUM [15:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+bx /
+bx .
+b0 -
+b0 ,
+b0 +
+b0 *
+b0 )
+b0 (
+b0 '
+0&
+0%
+b0 $
+b0 #
+b0 "
+bx !
+$end
+#5000
+b0 /
+1%
+#10000
+0%
+#12000
+b110 -
+b10100 ,
+b101010 +
+b1001000 *
+b11111111111111111111111100111000 "
+b11111111111111111111111100111000 '
+b11010101111001 $
+b11010101111001 )
+b10010001101000 #
+b10010001101000 (
+#15000
+b0 !
+b0 .
+b1111111111000100 /
+1%
+#20000
+0%
+#25000
+1%
+#30000
+0%
+#32000
+b0 /
+b10000 ,
+b1001 -
+b11001 +
+b100100 *
+b101011 "
+b101011 '
+b11010001010110 $
+b11010001010110 )
+b11010001010110 #
+b11010001010110 (
+1&
+#35000
+1%
+#40000
+0%
+#45000
+1%
+#50000
+0%
+#52000
+b1000 -
+b1110 ,
+b10010 +
+b10100 *
+b1000011101100101 $
+b1000011101100101 )
+b1001000110100 #
+b1001000110100 (
+0&
+#55000
+b1100111 /
+1%
+#60000
+0%
+#65000
+b1100111 !
+b1100111 .
+1%
+#70000
+0%
+#72000

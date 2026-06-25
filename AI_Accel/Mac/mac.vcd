@@ -1,0 +1,55 @@
+$date
+	Thu Jun 11 09:17:47 2026
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module tb_Mac_unit $end
+$var wire 8 ! OUT [7:0] $end
+$var reg 4 " A [3:0] $end
+$var reg 8 # ACC [7:0] $end
+$var reg 4 $ B [3:0] $end
+$scope module uut $end
+$var wire 4 % A [3:0] $end
+$var wire 8 & ACC [7:0] $end
+$var wire 4 ' B [3:0] $end
+$var wire 8 ( OUT [7:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+b11001 (
+b101 '
+b1010 &
+b11 %
+b101 $
+b1010 #
+b11 "
+b11001 !
+$end
+#10000
+b1 #
+b1 &
+b10 $
+b10 '
+b1001 !
+b1001 (
+b100 "
+b100 %
+#20000
+b10100 #
+b10100 &
+b110 $
+b110 '
+b111110 !
+b111110 (
+b111 "
+b111 %
+#30000

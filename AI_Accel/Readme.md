@@ -6,9 +6,9 @@ This is a small, fully working **neural network inference accelerator implemente
 
 It is the first concrete step in a longer plan:
 
-> **Build a small MLP on FPGA to prove the datapath and control logic → then scale and reuse the same building blocks to port the SensiNerveX autoencoder (a 10→8→4→8→10 network) onto FPGA.**
+> **Build a small MLP on FPGA to prove the datapath and control logic → then scale and reuse the same building blocks in other bigger flows**
 
-Everything here was deliberately built generic/parameterized from the start (input width, neuron count, bit width are all Verilog `parameter`s) specifically so the same RTL can be reused for SensiNerveX later, rather than being thrown away once this bring-up design works.
+Everything here was deliberately built generic/parameterised from the start (input width, neuron count, bit width are all Verilog `parameter`s) specifically so the same RTL can be reused for SensiNerveX later, rather than being thrown away once this bring-up design works.
 
 This project grew directly out of the `AI_Accel` folder of the [`FPGA_Workshop`](https://github.com/roboticist-blip/FPGA_Workshop) repo, which contained the original hand-built MAC unit and 4-element "neuron" (`mac_dot.v` / `neuron.v`) that this design generalizes and scales up.
 

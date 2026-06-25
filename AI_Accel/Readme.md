@@ -6,9 +6,9 @@ This is a small, fully working **neural network inference accelerator implemente
 
 It is the first concrete step in a longer plan:
 
-> **Build a small MLP on FPGA to prove the datapath and control logic → then scale and reuse the same building blocks in other bigger flows**
+> **Build a small MLP on FPGA to prove the datapath and control logic, then scale and reuse the same building blocks for larger feedforward networks on FPGA.**
 
-Everything here was deliberately built generic/parameterised from the start (input width, neuron count, bit width are all Verilog `parameter`s) specifically so the same RTL can be reused for SensiNerveX later, rather than being thrown away once this bring-up design works.
+Everything here was deliberately built generic/parameterized from the start (input width, neuron count, bit width are all Verilog `parameter`s) specifically so the same RTL can be reused at larger scale later, rather than being thrown away once this bring-up design works.
 
 This project grew directly out of the `AI_Accel` folder of the [`FPGA_Workshop`](https://github.com/roboticist-blip/FPGA_Workshop) repo, which contained the original hand-built MAC unit and 4-element "neuron" (`mac_dot.v` / `neuron.v`) that this design generalizes and scales up.
 
@@ -69,7 +69,7 @@ OUT = ReLU( (x0·w0 + x1·w1 + ... + x(N-1)·w(N-1)) + bias )
 - **ReLU** (Rectified Linear Unit) is applied: if the result is negative, output 0; otherwise pass it through unchanged. This is the standard activation function that lets neural networks model non-linear relationships — without it, stacking layers would be mathematically pointless (multiple linear layers collapse into one linear layer).
 - The final result is captured in a register on the clock edge — this is the only place a clock matters in the whole neuron; the dot product itself is pure combinational logic.
 
-`N`, the data width, and the accumulator width are all parameters — the exact same module serves as a 4-input neuron here and will serve as an 8-input or 10-input neuron when this gets reused for SensiNerveX, with zero code changes.
+`N`, the data width, and the accumulator width are all parameters — the exact same module serves as a 4-input neuron here and will serve as an 8-input or 10-input (or wider) neuron when this gets reused for a larger network, with zero code changes.
 
 ---
 
@@ -146,7 +146,7 @@ In the waveform, watch `dbg_state` step through `0→1→2→3→4→0` and conf
 ## Design decisions and why
 
 - **Combinational dot product, registered only at the output** — keeps control logic simple (no multi-cycle MAC sequencing needed) and is fast enough that an Artix-class FPGA has no trouble timing-closing it for a network this small.
-- **All neurons in a layer computed in parallel** — trades FPGA area (more multipliers used at once) for speed and simplicity; reasonable for a network this small, and the same tradeoff SensiNerveX's larger layers will need to be re-evaluated for once area becomes a real constraint.
+- **All neurons in a layer computed in parallel** — trades FPGA area (more multipliers used at once) for speed and simplicity; reasonable for a network this small, and the same tradeoff any larger network's bigger layers will need to be re-evaluated for once area becomes a real constraint.
 - **ReLU on every layer, including the output** — simple and standard for hidden layers. Note this means the network's final output can never go negative — a real modeling constraint worth remembering once real trained weights/tasks are involved, not just a hardware detail.
 - **Saturating requantization between layers, not truncation** — silently wrapping an overflowed value produces a wrong-but-plausible-looking number, which is far more dangerous to debug than a value that's visibly clipped to the max/min representable value.
 - **Hardcoded ROM weights for this stage** — removes weight-loading as a variable while the core compute pipeline is being proven. Runtime weight loading (UART/AXI) is a deliberately deferred next step, not an oversight.
@@ -157,5 +157,5 @@ In the waveform, watch `dbg_state` step through `0→1→2→3→4→0` and conf
 
 1. Bring this design into Vivado as an RTL project and check synthesis results (LUT/DSP utilization) on the target Artix part.
 2. Optionally validate on real hardware (e.g. drive `Y_OUT` to LEDs or out over UART) as a hardware-in-the-loop sanity check.
-3. Scale the same building blocks (`neuron.v`, `neuron_layer.v`, `requant.v`) up to SensiNerveX's actual 10→8→4→8→10 autoencoder shape.
-4. Move from hardcoded ROM weights to runtime-loaded weights (UART or AXI), which will also be needed for SensiNerveX since it's a continually-learning on-device model, not a fixed one.
+3. Scale the same building blocks (`neuron.v`, `neuron_layer.v`, `requant.v`) up to a larger, real-world network topology.
+4. Move from hardcoded ROM weights to runtime-loaded weights (UART or AXI) once a real trained model is being targeted.
